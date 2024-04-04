@@ -15,7 +15,7 @@ struct ContentView: View {
                 LuchadorView(luchador: "Goku", fuerza: "800/1000", trans: "Ultra Instinto", colorTexto: .black, colorFondo: .purple)
                 
                 
-                ZStack {
+               ZStack {
                     
                     LuchadorView(luchador: "Vegeta", fuerza: "790/1000", trans: "Vegeta Super Saiyan Blue", colorTexto: .blue, colorFondo: Color(red: 240/255, green: 240/255, blue: 240/255))
                     Text("Lo puedes entrenar¡¡")
@@ -29,7 +29,27 @@ struct ContentView: View {
                 }
                 
                 
+                
+                
+        
             }.padding(10)
+            
+            ZStack {
+                LuchadorView(luchador: "Vegito", fuerza: "1500/3000", trans: "Vegito Blue", colorTexto: .yellow, colorFondo: .green)
+                Image("vegito")
+                    //.resizable()
+                    .frame(width: 70)
+                    .clipShape(Circle())
+                    .offset(x: 0, y: -70)
+                Text("Unión entre Goku y Vegeta")
+                    .font(.system(.caption,design:  .rounded))
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                    .background(.yellow)
+                    .padding(5)
+                    .offset(x: 0, y: 80)
+            }
+            
         }
            
 }
@@ -85,5 +105,8 @@ struct LuchadorView: View {
         .padding(40)
         .background(colorFondo)
         .cornerRadius(10)
+        
+        
     }
+    
 }
